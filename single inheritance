@@ -1,0 +1,32 @@
+package Com.dhana533;
+// Base class
+class College {
+    void collegeDetails() {
+        System.out.println("College Name: BVRIT COLLEGE");
+        System.out.println("Location: HYDERABAD");
+    }
+}
+
+// Derived class
+class Student extends College {
+    void studentDetails() {
+        System.out.println("Student Name: DHANALAXMI");
+        System.out.println("Course: CSE");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+        
+        // Access methods from both classes
+        s.collegeDetails();  // From College class
+        s.studentDetails();  // From Student class
+    }
+}
+
+OUTPUT
+College Name: BVRIT COLLEGE
+Location: HYDERABAD
+Student Name: DHANALAXMI
+Course: CSE
