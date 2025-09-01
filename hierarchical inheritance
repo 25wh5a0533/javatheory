@@ -1,0 +1,45 @@
+package Com.dhana533;
+// Base class
+class Person {
+    void display() {
+        System.out.println("I am a person.");
+    }
+}
+
+// Derived class 1
+class Teacher extends Person {
+    void teach() {
+        System.out.println("I am a teacher. I teach students.");
+    }
+}
+
+// Derived class 2
+class Student extends Person {
+    void study() {
+        System.out.println("I am a student. I study lessons.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Teacher t = new Teacher();
+        Student s = new Student();
+
+        System.out.println("Teacher Object:");
+        t.display(); // Inherited from Person
+        t.teach();   // Teacher-specific method
+
+        System.out.println("\nStudent Object:");
+        s.display(); // Inherited from Person
+        s.study();   // Student-specific method
+    }
+}
+
+OUTPUT
+Teacher Object:
+I am a person.
+I am a teacher. I teach students.
+
+Student Object:
+I am a person.
+I am a student. I study lessons.
